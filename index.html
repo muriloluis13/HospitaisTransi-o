@@ -23,6 +23,8 @@
 .ni[data-s="eco"] .dot{background:#2DAFB0}.ni[data-s="eco"].active::before{background:#2DAFB0}.ni[data-s="eco"].active{background:rgba(45,175,176,.1);color:#2DAFB0}
 .ni[data-s="intl"] .dot{background:var(--coral)}.ni[data-s="intl"].active::before{background:var(--coral)}.ni[data-s="intl"].active{background:var(--coral-bg);color:var(--coral)}
 .ni[data-s="players"] .dot{background:#E86CA0}.ni[data-s="players"].active::before{background:#E86CA0}.ni[data-s="players"].active{background:rgba(232,108,160,.1);color:#E86CA0}
+.ni[data-s="custos"] .dot{background:#3D8B37}.ni[data-s="custos"].active::before{background:#3D8B37}.ni[data-s="custos"].active{background:rgba(61,139,55,.1);color:#3D8B37}
+.ni[data-s="unit"] .dot{background:#4CAF50}.ni[data-s="unit"].active::before{background:#4CAF50}.ni[data-s="unit"].active{background:rgba(76,175,80,.1);color:#4CAF50}
 .sf{margin-top:auto;padding:16px 22px 20px;border-top:1px solid var(--bd);flex-shrink:0}.sf .sl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--tm);font-weight:600;margin-bottom:6px}.sf .st{font-size:11px;color:var(--tm);line-height:1.7}
 .ov{display:none;position:fixed;inset:0;background:var(--bg-o);z-index:90;backdrop-filter:blur(2px);opacity:0;transition:opacity var(--tr)}.ov.vis{display:block;opacity:1}
 .main{margin-left:var(--sidebar-w);min-height:100vh;transition:margin-left var(--tr)}.main.exp{margin-left:0}
@@ -57,6 +59,7 @@
     <div class="ng"><div class="ngl">Principal</div>
       <div class="ni active" data-s="visao" onclick="go('visao')"><span class="dot"></span>Visão Geral</div>
       <div class="ni" data-s="players" onclick="go('players')"><span class="dot"></span>Players Privados</div>
+      <div class="ni" data-s="custos" onclick="go('custos')"><span class="dot"></span>Custos & Precificação</div>
     </div>
     <div class="ng"><div class="ngl">Contexto</div>
       <div class="ni" data-s="demo" onclick="go('demo')"><span class="dot"></span>Demográfico</div>
@@ -65,6 +68,7 @@
       <div class="ni" data-s="crescimento" onclick="go('crescimento')"><span class="dot"></span>Crescimento do Setor</div>
       <div class="ni" data-s="dist" onclick="go('dist')"><span class="dot"></span>Distribuição Geográfica</div>
       <div class="ni" data-s="econ" onclick="go('econ')"><span class="dot"></span>Impacto Econômico</div>
+      <div class="ni" data-s="unit" onclick="go('unit')"><span class="dot"></span>Unit Economics</div>
       <div class="ni" data-s="reint" onclick="go('reint')"><span class="dot"></span>Reinternação & Custos</div>
     </div>
     <div class="ng"><div class="ngl">Ecossistema</div>
@@ -166,6 +170,77 @@
   <div class="dg">
     <div class="dc"><h4>💡 Comparativo de Custo</h4><div class="mp"><div class="mpi"><div class="mic" style="background:var(--coral-bg);color:var(--coral)">🏥</div><div class="mb"><div class="ml">Diária hospital tradicional</div><div class="mv" style="color:var(--coral)">4–5× maior</div></div></div><div class="mpi"><div class="mic" style="background:var(--teal-bg);color:var(--teal)">🏠</div><div class="mb"><div class="ml">Diária hospital transição</div><div class="mv" style="color:var(--teal)">Referência</div></div></div></div><div class="nb">A Abrahct estima redução de até <strong style="color:var(--teal)">75%</strong> no custo da internação prolongada.</div><div class="sr"><span class="sl">Fontes:</span><a href="https://clinicaflorence.com.br/hospitais-de-transicao-apresentam-crescimento-exponencial/" target="_blank">Clínica Florence</a><a href="https://revistavisaohospitalar.com.br/setor-de-hospitais-e-clinicas-de-transicao-dobra-de-tamanho-no-brasil-nos-ultimos-cinco-anos/" target="_blank">Visão Hospitalar</a></div></div>
     <div class="dc"><h4>🚑 Internações Evitáveis</h4><div class="gw"><div class="gb" style="color:var(--orange)">20%</div><div class="gd">Das internações poderiam ser substituídas por transição ou cuidado domiciliar.</div><div class="prb"><div class="prf" data-w="20" style="background:linear-gradient(90deg,var(--orange),var(--gold))"></div></div><div class="prl"><span>Evitáveis: 20%</span><span>Fonte: IESS</span></div></div><div class="sr"><span class="sl">Fonte:</span><a href="https://placi.com.br/2025/09/11/hospitais-de-transicao-a-nova-fronteira-da-sustentabilidade-na-saude/" target="_blank">Placi / IESS</a></div></div>
+  </div>
+</div>
+
+<!-- ══ UNIT ECONOMICS ══ -->
+<div class="sp" id="sec-unit">
+  <div class="sh"><h2>Unit Economics & Investimentos</h2><p>Ticket médio de diárias, comparativo de custos por tipo de leito e CAPEX de referência para abertura de unidades de transição.</p></div>
+  <div class="kg">
+    <div class="kp" style="animation-delay:.05s"><div class="ab" style="background:var(--teal)"></div><div class="ki" style="background:var(--teal-bg);color:var(--teal)">🏷</div><div class="kl">Diária Transição (est.)</div><div class="kv" style="color:var(--teal)">~R$ 800–1.200</div><div class="ks">50% menor que hospital geral</div><div class="sr"><span class="sl">Fontes:</span><a href="https://placi.com.br/2025/09/11/hospitais-de-transicao-a-nova-fronteira-da-sustentabilidade-na-saude/" target="_blank">Placi/IESS (−50%)</a><a href="https://www.drgbrasil.com.br/valoremsaude/visao-de-custos-da-uti-adulta-no-brasil/" target="_blank">DRG Brasil (referências)</a></div></div>
+    <div class="kp" style="animation-delay:.1s"><div class="ab" style="background:var(--coral)"></div><div class="ki" style="background:var(--coral-bg);color:var(--coral)">🏥</div><div class="kl">Diária UTI (custo real)</div><div class="kv" style="color:var(--coral)">R$ 1.934–3.443</div><div class="ks">Variando por gestão (Planisa)</div><div class="sr"><span class="sl">Fonte:</span><a href="https://www.drgbrasil.com.br/valoremsaude/visao-de-custos-da-uti-adulta-no-brasil/" target="_blank">DRG Brasil / Planisa</a></div></div>
+    <div class="kp" style="animation-delay:.15s"><div class="ab" style="background:var(--blue)"></div><div class="ki" style="background:var(--blue-bg);color:var(--blue)">💰</div><div class="kl">CAPEX / Leito (ref.)</div><div class="kv" style="color:var(--blue)">~R$ 136k</div><div class="ks">Revitare: R$ 15M ÷ 110 leitos</div><div class="sr"><span class="sl">Fonte:</span><a href="https://exame.com/negocios/terca-da-serra-franquia-de-residencial-senior-investe-r-15-milhoes-em-hospital-de-transicao/" target="_blank">Exame (Revitare)</a></div></div>
+    <div class="kp" style="animation-delay:.2s"><div class="ab" style="background:var(--gold)"></div><div class="ki" style="background:var(--gold-bg);color:var(--gold)">📊</div><div class="kl">Receita Anual do Setor</div><div class="kv" style="color:var(--gold)">~R$ 492M</div><div class="ks">R$ 41M/mês × 12</div><div class="sr"><span class="sl">Fonte:</span><a href="https://medicinasa.com.br/abrahct-unidades-transicao/" target="_blank">Medicina S/A — ABRAHCT</a></div></div>
+  </div>
+
+  <div class="sd">Comparativo de Diárias por Tipo de Leito</div>
+
+  <div class="dg">
+    <div class="dc fw">
+      <h4>💲 Custo Médio Diária por Tipo de Leito <span class="tg" style="background:var(--blue-bg);color:var(--blue)">Valores de mercado</span></h4>
+      <div class="hb">
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">UTI Pública Direta</span><div class="hbt"><div class="hbf" data-w="100" style="background:linear-gradient(90deg,var(--coral),#a03030)">R$ 3.443</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">UTI Privada</span><div class="hbt"><div class="hbf" data-w="82" style="background:linear-gradient(90deg,#e07070,#c05050)">R$ 2.836</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">UTI OSS</span><div class="hbt"><div class="hbf" data-w="56" style="background:linear-gradient(90deg,var(--orange),#c06820)">R$ 1.934</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">UTI Filantrópica</span><div class="hbt"><div class="hbf" data-w="43" style="background:linear-gradient(90deg,var(--gold),#b09020)">R$ 1.470</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">Enfermaria Geral</span><div class="hbt"><div class="hbf" data-w="46" style="background:linear-gradient(90deg,var(--purple),#7050c0)">R$ 1.568</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">🟢 Transição (est.)</span><div class="hbt"><div class="hbf" data-w="29" style="background:linear-gradient(90deg,var(--teal),#0a8060)">~R$ 800–1.200</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">Custeio UTI SUS</span><div class="hbt"><div class="hbf" data-w="20" style="background:linear-gradient(90deg,#90a0b0,#708090)">R$ 600–700</div></div></div>
+      </div>
+      <div class="nb">Valores de diária UTI baseados em estudo da Planisa com 106 hospitais. Diária de transição estimada a partir da referência de −50% (IESS) sobre enfermaria/leito geral. Hospital de transição trabalha com <strong>diária global</strong> que inclui maioria dos serviços e insumos, gerando previsibilidade de custos para operadoras.</div>
+      <div class="sr"><span class="sl">Fontes:</span><a href="https://www.drgbrasil.com.br/valoremsaude/visao-de-custos-da-uti-adulta-no-brasil/" target="_blank">DRG Brasil / Planisa (UTIs)</a><a href="https://portalhospitaisbrasil.com.br/covid-19-em-2020-custo-mediano-de-diaria-em-uti-em-hospital-de-campanha-foi-de-r-3-365/" target="_blank">Hospitais Brasil (enfermaria)</a><a href="https://www.gov.br/saude/pt-br/assuntos/noticias/2022/janeiro/ministerio-da-saude-aumenta-valor-para-custeio-de-utis" target="_blank">Min. Saúde (custeio SUS)</a><a href="https://placi.com.br/2025/09/11/hospitais-de-transicao-a-nova-fronteira-da-sustentabilidade-na-saude/" target="_blank">Placi/IESS (−50%)</a></div>
+    </div>
+  </div>
+
+  <div class="sd">CAPEX — Investimentos de Referência</div>
+
+  <div class="dg">
+    <div class="dc">
+      <h4>🏗 Investimentos por Projeto</h4>
+      <div class="mp">
+        <div class="mpi"><div class="mic" style="background:var(--orange-bg);color:var(--orange)">🏥</div><div class="mb"><div class="ml">Revitare (Campinas) — 110 leitos</div><div class="mv" style="color:var(--orange)">R$ 15M</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--teal-bg);color:var(--teal)">🏥</div><div class="mb"><div class="ml">Florence (Recife) — 76 leitos</div><div class="mv" style="color:var(--teal)">R$ 20M+</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--purple-bg);color:var(--purple)">🏥</div><div class="mb"><div class="ml">Royal Care (Vitória expansão) — hosp-dia</div><div class="mv" style="color:var(--purple)">R$ 42M</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--blue-bg);color:var(--blue)">🏥</div><div class="mb"><div class="ml">Florence (total desde 2017) — ~230 leitos</div><div class="mv" style="color:var(--blue)">R$ 60M+</div></div></div>
+      </div>
+      <div class="sr"><span class="sl">Fontes:</span><a href="https://exame.com/negocios/terca-da-serra-franquia-de-residencial-senior-investe-r-15-milhoes-em-hospital-de-transicao/" target="_blank">Exame (Revitare)</a><a href="https://www.folhape.com.br/economia/recife-ganha-unidade-da-clinica-florence/205590/" target="_blank">Folha PE (Florence)</a><a href="https://www.folhavitoria.com.br/folha-business/grupo-royal-care-investe-r-42-milhoes-para-expandir-unidade-hospitalar-em-vitoria/" target="_blank">Folha Vitória (Royal Care)</a><a href="https://www.correio24horas.com.br/noticia/nid/hospital-de-transicao-reduz-custo-de-internacao-em-ate-75/" target="_blank">Correio (Florence total)</a></div>
+    </div>
+
+    <div class="dc">
+      <h4>📐 Métricas de Referência por Leito</h4>
+      <div class="mp">
+        <div class="mpi"><div class="mic" style="background:var(--blue-bg);color:var(--blue)">💰</div><div class="mb"><div class="ml">CAPEX por leito (Revitare)</div><div class="mv" style="color:var(--blue)">~R$ 136k</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--teal-bg);color:var(--teal)">💰</div><div class="mb"><div class="ml">CAPEX por leito (Florence Recife)</div><div class="mv" style="color:var(--teal)">~R$ 263k</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--gold-bg);color:var(--gold)">📋</div><div class="mb"><div class="ml">Incentivo SUS por leito (Portaria 2.809)</div><div class="mv" style="color:var(--gold)">até R$ 10k</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--coral-bg);color:var(--coral)">👥</div><div class="mb"><div class="ml">Empregos por unidade (Florence)</div><div class="mv" style="color:var(--coral)">~250</div></div></div>
+      </div>
+      <div class="nb">CAPEX varia significativamente conforme adaptação (hotel reformado vs. construção nova), complexidade assistencial e padrão de acabamento. Franquias menores (12 leitos) exigem investimento a partir de R$ 700k (Terça da Serra).</div>
+      <div class="sr"><span class="sl">Fontes:</span><a href="https://exame.com/negocios/terca-da-serra-franquia-de-residencial-senior-investe-r-15-milhoes-em-hospital-de-transicao/" target="_blank">Exame</a><a href="https://www.folhape.com.br/economia/recife-ganha-unidade-da-clinica-florence/205590/" target="_blank">Folha PE</a><a href="https://bvsms.saude.gov.br/bvs/saudelegis/gm/2012/prt2809_07_12_2012.html" target="_blank">Portaria 2.809/2012</a><a href="https://neofeed.com.br/negocios/investida-de-jose-carlos-semenzato-abre-nova-frente-com-hospital-de-transicao/" target="_blank">NeoFeed (franquia)</a></div>
+    </div>
+  </div>
+
+  <div class="dg">
+    <div class="dc fw">
+      <h4>⚖ Economia Gerada: UTI vs. Transição</h4>
+      <div class="srow">
+        <div class="sb2"><div class="sl2">Custo Médio Internação</div><div class="sv2" style="color:var(--coral)">R$ 10.000</div><div class="ss2">Saúde suplementar (2022)</div></div>
+        <div class="sb2"><div class="sl2">Custo 60+ vs. Jovem</div><div class="sv2" style="color:var(--orange)">2× maior</div><div class="ss2">Internação idoso vs. 24–28 anos</div></div>
+        <div class="sb2"><div class="sl2">Redução por Transição</div><div class="sv2" style="color:var(--teal)">−75%</div><div class="ss2">Saindo da UTI para transição</div></div>
+        <div class="sb2"><div class="sl2">Leitos "Liberados"</div><div class="sv2" style="color:var(--blue)">+13</div><div class="ss2">Florence/Salvador, 7 meses COVID</div></div>
+      </div>
+      <div class="nb" style="margin-top:16px">Cada paciente que migra de UTI para transição representa economia de ~75%. O modelo de <strong>diária global</strong> dos hospitais de transição inclui equipe multiprofissional, insumos e medicamentos, oferecendo <strong>previsibilidade de custos</strong> para operadoras — diferencial crucial em um cenário de sinistralidade crescente. Em 25% dos leitos brasileiros estão pacientes de longa permanência (ANAHP), muitos ocupando UTIs desnecessariamente.</div>
+      <div class="sr"><span class="sl">Fontes:</span><a href="https://www.clinicadetransicao.com.br/reinternacao/" target="_blank">Clínica de Transição / UNIDAS</a><a href="https://www.correio24horas.com.br/noticia/nid/hospital-de-transicao-reduz-custo-de-internacao-em-ate-75/" target="_blank">Correio 24h (Florence −75%)</a><a href="https://www.saudebusiness.com/artigos/o-que-so-hospitais-de-transio/" target="_blank">Saúde Business / ANAHP (25%)</a></div>
+    </div>
   </div>
 </div>
 
@@ -285,6 +360,118 @@
       <div class="sr"><span class="sl">Fontes:</span><a href="https://abrahct.org.br/" target="_blank">ABRAHCT</a><a href="https://fortezzapartners.com.br/tendencias-em-ma-no-setor-de-saude-brasileiro/" target="_blank">Fortezza Partners (M&A)</a><a href="https://www.revitare.care/blog/o-que-e-um-hospital-de-transicao" target="_blank">Revitare (histórico)</a></div>
     </div>
   </div>
+
+  <div class="sd">CAPEX & Investimentos por Empresa</div>
+
+  <div class="dg">
+    <div class="dc fw">
+      <h4>💰 Investimentos Conhecidos <span class="tg" style="background:rgba(232,108,160,.1);color:#E86CA0">Dados públicos</span></h4>
+      <div class="hb">
+        <div class="hbr"><span class="hbl" style="width:70px;font-size:11px">Florence</span><div class="hbt"><div class="hbf" data-w="100" style="background:linear-gradient(90deg,var(--teal),#10a882)">R$ 60M (total desde 2017)</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:70px;font-size:11px">Royal Care</span><div class="hbt"><div class="hbf" data-w="80" style="background:linear-gradient(90deg,var(--blue),#4a80d0)">R$ 72M (Vitória + expansão)</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:70px;font-size:11px">Revitare</span><div class="hbt"><div class="hbf" data-w="25" style="background:linear-gradient(90deg,var(--orange),#c87030)">R$ 15M (110 leitos)</div></div></div>
+      </div>
+      <div class="srow" style="margin-top:24px">
+        <div class="sb2"><div class="sl2">CAPEX / Leito (Revitare)</div><div class="sv2" style="color:var(--orange)">~R$ 136k</div><div class="ss2">Adaptação de hotel</div></div>
+        <div class="sb2"><div class="sl2">CAPEX / Leito (Florence)</div><div class="sv2" style="color:var(--teal)">~R$ 263k</div><div class="ss2">Construção nova (Recife)</div></div>
+        <div class="sb2"><div class="sl2">Valuation M&A / Leito</div><div class="sv2" style="color:var(--purple)">~R$ 1,55M</div><div class="ss2">Mediana hospitais BR</div></div>
+      </div>
+      <div class="sr"><span class="sl">Fontes:</span><a href="https://www.correio24horas.com.br/noticia/nid/hospital-de-transicao-reduz-custo-de-internacao-em-ate-75/" target="_blank">Correio 24h (Florence R$60M)</a><a href="https://www.folhavitoria.com.br/folha-business/grupo-royal-care-investe-r-42-milhoes-para-expandir-unidade-hospitalar-em-vitoria/" target="_blank">Folha Vitória (Royal Care)</a><a href="https://exame.com/negocios/terca-da-serra-franquia-de-residencial-senior-investe-r-15-milhoes-em-hospital-de-transicao/" target="_blank">Exame (Revitare)</a><a href="https://xvifinance.com.br/2022/12/15/qual-valor-de-um-hospital/" target="_blank">XVI Finance (M&A)</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CUSTOS & PRECIFICAÇÃO ══ -->
+<div class="sp" id="sec-custos">
+  <div class="sh"><h2>Custos & Precificação</h2><p>Comparativo de diárias, ticket médio e benchmarks entre internação convencional (inpatient), UTI, transição e hospital-dia (outpatient).</p></div>
+  <div class="kg">
+    <div class="kp" style="animation-delay:.05s"><div class="ab" style="background:var(--orange)"></div><div class="ki" style="background:var(--orange-bg);color:var(--orange)">🏥</div><div class="kl">Diária Internação (supl.)</div><div class="kv" style="color:var(--orange)">R$ 1.700</div><div class="ks">Leito comum — saúde suplementar (ANS)</div><div class="sr"><span class="sl">Fonte:</span><a href="https://mail.revistaseguroeseguro.com.br/artigo/saiba-quanto-custa-uma-diaria-hospitalar-se-precisar-ficar-internado-pela-covid-19-ou-outra-doenca/90" target="_blank">Rev. Seguro / ANS</a></div></div>
+    <div class="kp" style="animation-delay:.1s"><div class="ab" style="background:#3D8B37"></div><div class="ki" style="background:rgba(61,139,55,.1);color:#3D8B37">🏠</div><div class="kl">Diária Transição (est.)</div><div class="kv" style="color:#3D8B37">R$ 425–850</div><div class="ks">−50% a −75% da internação convenc.</div><div class="sr"><span class="sl">Fontes:</span><a href="https://placi.com.br/2025/09/11/hospitais-de-transicao-a-nova-fronteira-da-sustentabilidade-na-saude/" target="_blank">Placi/IESS (−50%)</a><a href="https://clinicaflorence.com.br/hospitais-de-transicao-apresentam-crescimento-exponencial/" target="_blank">Florence/ABRAHCT (−75%)</a></div></div>
+    <div class="kp" style="animation-delay:.15s"><div class="ab" style="background:var(--coral)"></div><div class="ki" style="background:var(--coral-bg);color:var(--coral)">⚕</div><div class="kl">Diária UTI (supl.)</div><div class="kv" style="color:var(--coral)">R$ 3.700–4.000</div><div class="ks">Saúde suplementar (ANS)</div><div class="sr"><span class="sl">Fonte:</span><a href="https://mail.revistaseguroeseguro.com.br/artigo/saiba-quanto-custa-uma-diaria-hospitalar-se-precisar-ficar-internado-pela-covid-19-ou-outra-doenca/90" target="_blank">Rev. Seguro / ANS</a></div></div>
+    <div class="kp" style="animation-delay:.2s"><div class="ab" style="background:var(--blue)"></div><div class="ki" style="background:var(--blue-bg);color:var(--blue)">📈</div><div class="kl">Ticket Médio / Internação</div><div class="kv" style="color:var(--blue)">R$ 10.153</div><div class="ks">Saúde suplementar (UNIDAS, 2022)</div><div class="sr"><span class="sl">Fonte:</span><a href="https://medicinasa.com.br/custo-internacoes/" target="_blank">Medicina S/A / UNIDAS</a></div></div>
+  </div>
+  <div class="sd">Comparativo de Diárias — Todos os Modelos</div>
+  <div class="dg">
+    <div class="dc fw">
+      <h4>📊 Custo Diário por Tipo de Leito <span class="tg" style="background:rgba(61,139,55,.1);color:#3D8B37">Saúde Suplementar + SUS</span></h4>
+      <div class="hb">
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">UTI Premium</span><div class="hbt"><div class="hbf" data-w="100" style="background:linear-gradient(90deg,var(--coral),#a03030)">R$ 12.000–20.000</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">UTI Supl.</span><div class="hbt"><div class="hbf" data-w="25" style="background:linear-gradient(90deg,#D05454,#a04040)">R$ 3.700–4.000</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">UTI Custo</span><div class="hbt"><div class="hbf" data-w="12" style="background:linear-gradient(90deg,var(--gold),#b89020)">R$ 1.934</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">Intern. Supl.</span><div class="hbt"><div class="hbf" data-w="11" style="background:linear-gradient(90deg,var(--orange),#c87030)">R$ 1.611–1.808</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">Transição</span><div class="hbt"><div class="hbf" data-w="5.5" style="background:linear-gradient(90deg,#3D8B37,#2a6828)">R$ 425–850</div></div></div>
+        <div class="hbr"><span class="hbl" style="width:90px;font-size:11px">Enf. SUS</span><div class="hbt"><div class="hbf" data-w="1.5" style="background:linear-gradient(90deg,var(--purple),#6a40b0)">~R$ 206</div></div></div>
+      </div>
+      <div class="nb">A diária de transição é <strong style="color:#3D8B37">50% a 75% menor</strong> que a <strong>internação convencional</strong> (inpatient) na saúde suplementar. A redução é sobre o leito de internação, não UTI. Hospital-dia (outpatient) não inclui pernoite e tem custo ainda menor.</div>
+      <div class="sr"><span class="sl">Fontes:</span><a href="https://mail.revistaseguroeseguro.com.br/artigo/saiba-quanto-custa-uma-diaria-hospitalar-se-precisar-ficar-internado-pela-covid-19-ou-outra-doenca/90" target="_blank">Rev. Seguro/ANS (supl.)</a><a href="https://www.drgbrasil.com.br/valoremsaude/estimativa-de-custos-operacionais-dos-leitos-de-uti-adulto-em-consequencia-do-covid-19/" target="_blank">Planisa (UTI custo)</a><a href="https://saudealberteinstein.com.br/quanto-custa-uma-diaria-de-uti-no-hospital-sirio-libanes/" target="_blank">Einstein (premium)</a><a href="https://www.azos.com.br/vida-segura/quanto-custa-uma-diaria-de-internacao-hospitalar" target="_blank">Azos (SUS)</a></div>
+    </div>
+  </div>
+  <div class="dg">
+    <div class="dc">
+      <h4>💸 Ticket Médio por Internação Completa</h4>
+      <div class="pc">
+        <div class="pcl"><div class="pb" data-h="100" style="background:linear-gradient(180deg,var(--blue),#2a5cb8)"><span class="pv" style="color:var(--blue)">R$ 6,4k</span></div><span class="py">2019</span></div>
+        <div class="pcl"><div class="pb" data-h="160" style="background:linear-gradient(180deg,var(--coral),#a03030)"><span class="pv" style="color:var(--coral)">R$ 10,2k</span></div><span class="py">2022</span></div>
+      </div>
+      <div class="nb">Alta de <strong style="color:var(--coral)">57%</strong> em 3 anos na saúde suplementar. Pacientes <strong>60+</strong> custam mais que o dobro vs. faixa 24–28 anos. Principal causa: doenças do sistema circulatório.</div>
+      <div class="sr"><span class="sl">Fonte:</span><a href="https://medicinasa.com.br/custo-internacoes/" target="_blank">Medicina S/A / UNIDAS (jan/2024)</a></div>
+    </div>
+    <div class="dc">
+      <h4>🏷 Modelos de Atendimento</h4>
+      <div class="mp">
+        <div class="mpi"><div class="mic" style="background:var(--coral-bg);color:var(--coral)">🏥</div><div class="mb"><div class="ml"><strong>Inpatient</strong> — Internação convencional</div><div class="mv" style="color:var(--coral)">R$ 1.700/dia</div></div></div>
+        <div class="mpi"><div class="mic" style="background:#3D8B37;color:#fff">🔄</div><div class="mb"><div class="ml"><strong>Transição</strong> — Cuidados intermediários</div><div class="mv" style="color:#3D8B37">R$ 425–850/dia</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--blue-bg);color:var(--blue)">🌤</div><div class="mb"><div class="ml"><strong>Hospital-Dia</strong> — Outpatient, sem pernoite</div><div class="mv" style="color:var(--blue)">Menor custo</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--teal-bg);color:var(--teal)">🏠</div><div class="mb"><div class="ml"><strong>Home Care</strong> — Atenção domiciliar</div><div class="mv" style="color:var(--teal)">Variável</div></div></div>
+      </div>
+      <div class="nb">A transição fica entre o inpatient e o outpatient: pacientes com alta do agudo mas que ainda precisam de cuidados 24h antes de voltar ao domicílio ou ao hospital-dia.</div>
+      <div class="sr"><span class="sl">Fontes:</span><a href="https://www.gov.br/ans/pt-br/centrais-de-conteudo/conta-20aberta-20aprimorada-pdf" target="_blank">ANS — Conta Aberta Aprimorada</a><a href="https://www.portaldofaturamentohospitalar.com/2024/03/diaria-hospitalar-o-que-e-e-como.html" target="_blank">Portal Faturamento Hospitalar</a></div>
+    </div>
+  </div>
+  <div class="dg">
+    <div class="dc">
+      <h4>🔄 Custo Oculto da Reinternação</h4>
+      <div class="mp">
+        <div class="mpi"><div class="mic" style="background:var(--gold-bg);color:var(--gold)">📊</div><div class="mb"><div class="ml">Reinternações nos custos totais</div><div class="mv" style="color:var(--gold)">16,4%</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--coral-bg);color:var(--coral)">🔄</div><div class="mb"><div class="ml">Readmissão em até 30 dias</div><div class="mv" style="color:var(--coral)">19,8%</div></div></div>
+        <div class="mpi"><div class="mic" style="background:rgba(61,139,55,.15);color:#3D8B37">✅</div><div class="mb"><div class="ml">Redução com transição adequada</div><div class="mv" style="color:#3D8B37">−40%</div></div></div>
+      </div>
+      <div class="sr"><span class="sl">Fontes:</span><a href="https://www.saudebusiness.com/voz-da-marca/reinternao-j-representa-1637-dos-custos-com-hospitalizao-no-brasil" target="_blank">Saúde Business / Funcional</a><a href="https://www.clinicadetransicao.com.br/reinternacao/" target="_blank">Clínica de Transição / IBSP</a></div>
+    </div>
+    <div class="dc">
+      <h4>🏗 CAPEX: Benchmarks do Setor</h4>
+      <div class="mp">
+        <div class="mpi"><div class="mic" style="background:var(--orange-bg);color:var(--orange)">🔨</div><div class="mb"><div class="ml">CAPEX/leito — adaptação (hotel)</div><div class="mv" style="color:var(--orange)">~R$ 136k</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--teal-bg);color:var(--teal)">🏗</div><div class="mb"><div class="ml">CAPEX/leito — construção nova</div><div class="mv" style="color:var(--teal)">~R$ 263k</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--coral-bg);color:var(--coral)">🏥</div><div class="mb"><div class="ml">CAPEX/leito UTI — hospital tradicional</div><div class="mv" style="color:var(--coral)">~R$ 500k</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--blue-bg);color:var(--blue)">📐</div><div class="mb"><div class="ml">Custo m² construção hospitalar</div><div class="mv" style="color:var(--blue)">~R$ 4.000</div></div></div>
+      </div>
+      <div class="sr"><span class="sl">Fontes:</span><a href="https://exame.com/negocios/terca-da-serra-franquia-de-residencial-senior-investe-r-15-milhoes-em-hospital-de-transicao/" target="_blank">Exame (Revitare)</a><a href="https://www.folhape.com.br/economia/recife-ganha-unidade-da-clinica-florence/205590/" target="_blank">Folha PE (Florence)</a><a href="https://www.seniorconsulting.com.br/quanto-custa-um-hospital-de-medio-porte-um-guia-completo-e-detalhado" target="_blank">Senior Consulting</a></div>
+    </div>
+  </div>
+  <div class="dg">
+    <div class="dc">
+      <h4>📈 Múltiplos M&A — Hospitais BR</h4>
+      <div class="mp">
+        <div class="mpi"><div class="mic" style="background:var(--purple-bg);color:var(--purple)">💰</div><div class="mb"><div class="ml">Preço / Receita Líquida (mediana)</div><div class="mv" style="color:var(--purple)">1,78×</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--gold-bg);color:var(--gold)">📊</div><div class="mb"><div class="ml">Preço / EBITDA (mediana)</div><div class="mv" style="color:var(--gold)">8,94×</div></div></div>
+        <div class="mpi"><div class="mic" style="background:var(--teal-bg);color:var(--teal)">🛏</div><div class="mb"><div class="ml">Valor por leito (mediana)</div><div class="mv" style="color:var(--teal)">R$ 1,55M</div></div></div>
+      </div>
+      <div class="nb">Alinhados com EUA (1,42× receita / 9,43× EBITDA). Transição tende a operar com múltiplos menores por menor complexidade.</div>
+      <div class="sr"><span class="sl">Fonte:</span><a href="https://xvifinance.com.br/2022/12/15/qual-valor-de-um-hospital/" target="_blank">XVI Finance — Múltiplos de Mercado</a></div>
+    </div>
+    <div class="dc">
+      <h4>🧮 Simulação: Economia com Transição</h4>
+      <div class="srow">
+        <div class="sb2"><div class="sl2">Diária Internação</div><div class="sv2" style="color:var(--orange)">R$ 1.700</div><div class="ss2">Convencional (supl.)</div></div>
+        <div class="sb2"><div class="sl2">Diária Transição</div><div class="sv2" style="color:#3D8B37">~R$ 425</div><div class="ss2">Cenário −75%</div></div>
+        <div class="sb2"><div class="sl2">Economia / Dia</div><div class="sv2" style="color:var(--teal)">~R$ 1.275</div><div class="ss2">Por paciente</div></div>
+        <div class="sb2"><div class="sl2">Economia / 57 dias</div><div class="sv2" style="color:var(--blue)">~R$ 72,7k</div><div class="ss2">Permanência média</div></div>
+      </div>
+      <div class="nb" style="text-align:center">Cada paciente transferido da <strong>internação convencional</strong> para transição (perm. média 57 dias) gera economia de <strong style="color:var(--teal)">~R$ 72,7 mil</strong>. Com <strong>2.573 leitos</strong> a 81% de ocupação, a economia potencial anual chega a <strong style="color:#3D8B37">~R$ 968 milhões</strong>.</div>
+      <div class="sr"><span class="sl">Cálculo baseado em:</span><a href="https://mail.revistaseguroeseguro.com.br/artigo/saiba-quanto-custa-uma-diaria-hospitalar-se-precisar-ficar-internado-pela-covid-19-ou-outra-doenca/90" target="_blank">ANS (diária supl.)</a><a href="https://clinicaflorence.com.br/hospitais-de-transicao-apresentam-crescimento-exponencial/" target="_blank">Florence (−75%)</a><a href="https://medicinasa.com.br/abrahct-unidades-transicao/" target="_blank">ABRAHCT (81%, 57d)</a></div>
+    </div>
+  </div>
 </div>
 
 <!-- ══ INTERNACIONAL ══ -->
@@ -315,7 +502,7 @@ function tog(){if(mob){sb.classList.toggle('open');ov.classList.toggle('vis')}el
 function cmob(){if(mob){sb.classList.remove('open');ov.classList.remove('vis')}}
 window.addEventListener('resize',()=>{const w=mob;mob=window.innerWidth<=768;if(w!==mob){sb.classList.remove('collapsed','open');mn.classList.remove('exp');ov.classList.remove('vis')}});
 function theme(){const h=document.documentElement,d=h.getAttribute('data-theme')==='dark';h.setAttribute('data-theme',d?'light':'dark');document.getElementById('kn').textContent=d?'☀':'🌙';document.getElementById('tl').textContent=d?'Claro':'Escuro'}
-const T={visao:'Visão Geral',demo:'Contexto Demográfico',crescimento:'Crescimento do Setor',dist:'Distribuição Geográfica',econ:'Impacto Econômico',reint:'Reinternação & Custos',eco:'Paliativos & Home Care',players:'Players Privados',intl:'Comparativo Global'};
+const T={visao:'Visão Geral',players:'Players Privados',custos:'Custos & Precificação',demo:'Contexto Demográfico',crescimento:'Crescimento do Setor',dist:'Distribuição Geográfica',econ:'Impacto Econômico',reint:'Reinternação & Custos',eco:'Paliativos & Home Care',intl:'Comparativo Global'};
 function go(id){document.querySelectorAll('.ni').forEach(n=>n.classList.remove('active'));document.querySelector(`.ni[data-s="${id}"]`).classList.add('active');document.querySelectorAll('.sp').forEach(p=>p.classList.remove('active'));document.getElementById('sec-'+id).classList.add('active');document.getElementById('pt').textContent=T[id]||'';cmob();setTimeout(anim,120)}
 function actr(){document.querySelectorAll('.sp.active .ctr').forEach(el=>{const t=+el.dataset.t,d=1800,s=performance.now(),sep=el.hasAttribute('data-sep');function tk(n){const p=Math.min((n-s)/d,1),e=1-Math.pow(1-p,3),v=Math.round(t*e);el.textContent=sep?v.toLocaleString('pt-BR'):v;if(p<1)requestAnimationFrame(tk)}requestAnimationFrame(tk)})}
 function abars(){document.querySelectorAll('.sp.active .hbf').forEach(e=>{e.style.width=e.dataset.w+'%'});document.querySelectorAll('.sp.active .prf').forEach(e=>{e.style.width=e.dataset.w+'%'})}
